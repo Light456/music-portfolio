@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grant Zhong — Compositions</title>
+<meta name="description" content="Original music by Grant Zhong built from harmonica, farm field recordings, and digital instrumentation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f3ec;
+    --surface: #fffdf8;
+    --ink: #1f2a1f;
+    --muted: #5b6657;
+    --line: #e2dccd;
+    --accent: #4d7c3a;
+    --accent-soft: #e5eedb;
+    --soil: #7a5a3a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141812;
+      --surface: #1c211a;
+      --ink: #e8ece2;
+      --muted: #a3ad9c;
+      --line: #2f372b;
+      --accent: #8fc46f;
+      --accent-soft: #26331f;
+      --soil: #c9a27a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141812;
+    --surface: #1c211a;
+    --ink: #e8ece2;
+    --muted: #a3ad9c;
+    --line: #2f372b;
+    --accent: #8fc46f;
+    --accent-soft: #26331f;
+    --soil: #c9a27a;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 Inter, system-ui, sans-serif;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+
+  header { padding: 72px 0 40px; border-bottom: 1px solid var(--line); }
+  .eyebrow {
+    font-size: 13px; font-weight: 600; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--accent); margin: 0 0 12px;
+  }
+  h1, h2, h3 { font-family: Fraunces, Georgia, serif; font-weight: 600; line-height: 1.2; }
+  h1 { font-size: clamp(34px, 6vw, 52px); margin: 0 0 16px; }
+  header p.lede { font-size: 18px; color: var(--muted); max-width: 640px; margin: 0; }
+
+  nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+  nav a {
+    font-size: 14px; font-weight: 500; text-decoration: none; color: var(--ink);
+    border: 1px solid var(--line); background: var(--surface);
+    padding: 6px 14px; border-radius: 999px;
+  }
+  nav a:hover { border-color: var(--accent); color: var(--accent); }
+
+  section { padding: 56px 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type { border-bottom: 0; }
+  .section-num { font-family: Fraunces, Georgia, serif; color: var(--soil); font-size: 15px; margin: 0 0 6px; }
+  h2 { font-size: clamp(26px, 4vw, 34px); margin: 0 0 14px; }
+  .intro { color: var(--muted); max-width: 680px; margin: 0 0 12px; }
+  .context {
+    background: var(--accent-soft); border-left: 3px solid var(--accent);
+    padding: 16px 20px; border-radius: 6px; margin: 20px 0 8px; max-width: 700px;
+  }
+  .context h3 { font-size: 17px; margin: 0 0 6px; }
+  .context p { margin: 0; }
+
+  .tracks { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 16px; }
+  .track {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+    padding: 20px 22px;
+  }
+  .track-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px; }
+  .track-no {
+    flex: none; font-family: Fraunces, Georgia, serif; font-size: 14px;
+    color: var(--soil); min-width: 26px;
+  }
+  .track h3 { font-size: 21px; margin: 0; }
+  .track p { margin: 0 0 14px; color: var(--ink); }
+  .player { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
+  .player audio { flex: 1 1 260px; min-width: 0; width: 100%; height: 40px; }
+  .player a {
+    font-size: 14px; font-weight: 500; color: var(--accent); text-decoration: none; white-space: nowrap;
+  }
+  .player a:hover { text-decoration: underline; }
+
+  footer { padding: 32px 0 56px; color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Original Music</p>
+    <h1>Sound from Working Land</h1>
+    <p class="lede">Compositions built from harmonica, digital instrumentation, and real farm audio: drip emitters, soil, nursery tools, wind through crop rows, and the sounds of harvest.</p>
+    <nav>
+      <a href="#compositions">Ten Original Pieces</a>
+      <a href="#portfolio">Recorded Portfolio</a>
+      <a href="#tilth-motifs">Tilth Motifs</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ SECTION 1 ============ -->
+  <section id="compositions">
+    <p class="section-num">I</p>
+    <h2>Ten Original Pieces</h2>
+    <p class="intro">Ten original pieces inspired by agricultural rhythms, natural soundscapes, and environmental cycles, including themes based on irrigation flow patterns, soil percussion, and farm-ambient field recordings.</p>
+
+    <ol class="tracks">
+      <li class="track">
+        <div class="track-head"><span class="track-no">01</span><h3>Dripline Counterpoint</h3></div>
+        <p>This piece draws its structure from the steady, metronomic pulses of drip-irrigation emitters. The repeating water rhythms form the backbone of the composition, creating a counterpoint between natural flow and human-engineered precision. As layers build, the music mirrors how irrigation networks distribute life across a field. The piece expresses quiet efficiency and the subtle beauty of controlled water movement.</p>
+        <div class="player">
+          <audio controls preload="none" src="music/01-dripline-counterpoint.mp3"></audio>
+          <a href="music/01-dripline-counterpoint.mp3" target="_blank">Open file ↗</a>
+        </div>
+      </li>
+      <li class="track">
+        <div class="track-head"><span class="track-no">02</span><h3>Soil Percussion Study</h3></div>
+        <p>Inspired by the tactile sounds of planting and soil work, this piece uses ground impacts, granular textures, and tray taps as its percussive foundation. Each rhythm reflects the physicality of cultivation — digging, pressing, and shaping earth. The composition explores how soil carries both weight and resonance. It evokes the grounded, cyclical labor that sustains agricultural ecosystems.</p>
+        <div class="player">
+          <audio controls preload="none" src="music/02-soil-percussion-study.mp3"></audio>
+          <a href="music/02-soil-percussion-study.mp3" target="_blank">Open file ↗</a>
+        </div>
+      </li>
+      <li class="track">
+        <div class="track-head"><span class="track-no">03</span><h3>Nursery Tools Sonata</h3></div>
+        <p>This sonata transforms everyday nursery tools into musical voices: pruning-shear clicks, seedling-tray rattles, and soft brush movements. The piece highlights the delicate choreography of tending young plants, where small motions accumulate into meaningful care. Melodic lines weave through these tactile sounds, suggesting growth and quiet attention. It expresses the intimacy of working closely with living things.</p>
+        <div class="player">
+          <audio controls preload="none" src="music/03-nursery-tools-sonata.mp3"></audio>
+          <a href="music/03-nursery-tools-sonata.mp3" target="_blank">Open file ↗</a>
+        </div>
+      </li>
+      <li class="track">
+        <div class="track-head"><span class="track-no">04</span><h3>Wind Through Rows</h3></div>
+        <p>Built from harmonica lines blended with filtered field recordings, this piece captures the sensation of wind moving through crop rows. The music drifts and bends like air weaving between plants, creating a sense of openness and breath. Subtle shifts in tone mirror changing weather and seasonal transitions. The piece evokes calm, continuity, and the slow passage of time across farmland.</p>
+        <div class="player">
+          <audio controls preload="none" src="music/04-wind-through-rows.mp3"></audio>
+          <a href="music/04-wind-through-rows.mp3" target="_blank">Open file ↗</a>
+        </div>
+      </li>
+      <li class="track">
+        <div class="track-head"><span class="track-no">05</span><h3>Aquaponic Currents</h3></div>
+        <p>Inspired by the circulating flows of my aquaponics system, this composition uses water tones, pump hums, and gentle melodic arcs to represent nutrient cycling. The piece moves in loops, echoing the closed-loop harmony between fish, plants, and water. Its textures feel fluid and self-sustaining, reflecting the elegance of ecological balance. It expresses renewal, interdependence, and quiet motion.</p>
+        <div class="player">
+          <audio controls preload="none" src="music/05-aquaponic-currents.mp3"></audio>
+          <a href="music/05-aquaponic-currents.mp3" target="_blank">Open file ↗</a>
+        </div>
+      </li>
+      <li class="track">
+        <div class="track-head"><span class="track-no">06</span><h3>Compost Cycle Etude</h3></div>
+        <p>This etude explores the transformation of organic matter through layered, earthy sounds: compost turning, soil mixing, and soft decomposition textures. The rhythms mimic the slow breakdown and rebirth inherent in regenerative agriculture. Melodic fragments emerge like new growth rising from amended soil. The piece expresses patience, renewal, and the unseen processes that sustain life.</p>
+        <div class="player">
+          <audio controls preload="none" src="music/06-compost-cycle-etude.mp3"></audio>
+          <a href="music/06-compost-cycle-etude.mp3" target="_blank">Open file ↗</a>
+        </div>
+      </li>
+      <li class="track">
+        <div class="track-head"><span class="track-no">07</span><h3>Irrigation Basin Variations</h3></div>
+        <p>Structured as a set of variations, this piece reflects the dynamic behavior of basin-scale irrigation — pressure shifts, flow changes, and water redistribution. Each variation introduces a new pattern, mirroring how water behaves differently across terrain and system design. The music moves between calm expanses and energetic surges. It expresses the complexity and adaptability of large-scale water management.</p>
+        <div class="player">
+          <audio controls preload="none" src="music/07-irrigation-basin-variations.mp3"></audio>
+          <a href="music/07-irrigation-basin-variations.mp3" target="_blank">Open file ↗</a>
+        </div>
+      </li>
+      <li class="track">
+        <div class="track-head"><span class="track-no">08</span><h3>Farmers Market Overture</h3></div>
+        <p>This overture captures the lively atmosphere of farmers markets: produce bins shifting, tent fabric fluttering, and the ambient hum of community exchange. Bright harmonies evoke morning energy and the optimism of local agriculture. Rhythmic motifs reflect movement — vendors setting up, customers browsing, conversations unfolding. The piece expresses vibrancy, connection, and the social heartbeat of sustainable food systems.</p>
+        <div class="player">
+          <audio controls preload="none" src="music/08-farmers-market-overture.mp3"></audio>
+          <a href="music/08-farmers-market-overture.mp3" target="_blank">Open file ↗</a>
+        </div>
+      </li>
+      <li class="track">
+        <div class="track-head"><span class="track-no">09</span><h3>Packing House Polyphony</h3></div>
+        <p>Inspired by my Second Harvest volunteer work, this piece arranges sorting, lifting, and produce-movement sounds into interlocking musical lines. The polyphonic structure mirrors the coordinated flow of a packing shift, where many hands contribute to a shared purpose. The rhythms are steady, purposeful, and communal. It expresses teamwork, generosity, and the quiet dignity of food distribution.</p>
+        <div class="player">
+          <audio controls preload="none" src="music/09-packing-house-polyphony.mp3"></audio>
+          <a href="music/09-packing-house-polyphony.mp3" target="_blank">Open file ↗</a>
+        </div>
+      </li>
+      <li class="track">
+        <div class="track-head"><span class="track-no">10</span><h3>Field Hands Reverie</h3></div>
+        <p>This reflective piece centers on the subtle gestures of farm and garden work — planting, mulching, watering, and tending. Soft harmonica lines blend with ambient field recordings to create a contemplative atmosphere. The music highlights the human presence behind sustainable agriculture, focusing on care rather than machinery. It expresses humility, devotion, and the quiet reverie found in hands-on stewardship of land.</p>
+        <div class="player">
+          <audio controls preload="none" src="music/10-field-hands-reverie.mp3"></audio>
+          <a href="music/10-field-hands-reverie.mp3" target="_blank">Open file ↗</a>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ SECTION 2 ============ -->
+  <section id="portfolio">
+    <p class="section-num">II</p>
+    <h2>Recorded Portfolio</h2>
+    <p class="intro">Five recorded tracks that blend harmonica, natural samples (running water, wind through crops, nursery tools), and digital instrumentation to explore the connection between sound and sustainable farming practices.</p>
+    <div class="context">
+      <p>This portfolio brings together harmonica, field recordings, and digital instrumentation to interpret the atmosphere of working landscapes. Each track draws from moments in agricultural settings, from the movement of water to the quiet weight of soil and the energy of harvest days. Natural sounds collected during farm and nursery work form the foundation, while melodic lines and digital textures shape them into expressive compositions. The collection reflects how environmental processes carry their own rhythm and how everyday scenes in sustainable agriculture can be translated into music.</p>
+    </div>
+
+    <ol class="tracks">
+      <li class="track">
+        <div class="track-head"><span class="track-no">01</span><h3>Verdure</h3></div>
+        <p>Verdure reflects the vitality of growing spaces, shaped by leaf rustles, soft soil movement, and the gentle presence of nursery beds. Harmonica lines rise with a sense of emergence, echoing the early stages of plant life. Digital harmonies deepen the texture, suggesting layers of growth beneath the surface. The piece carries an atmosphere of renewal and quiet flourishing.</p>
+        <div class="player">
+          <audio controls preload="none" src="music/verdure.mp3"></audio>
+          <a href="music/verdure.mp3" target="_blank">Open file ↗</a>
+        </div>
+      </li>
+      <li class="track">
+        <div class="track-head"><span class="track-no">02</span><h3>Flux</h3></div>
+        <p>Flux follows the motion of water across farmland, guided by irrigation pulses, flowing streams, and subtle mechanical hums. Harmonica motifs move fluidly through these sounds, mirroring the shifting patterns of water in the field. Digital elements provide structure that hints at the design behind modern irrigation systems. The track conveys movement, change, and the essential role of water in sustaining crops.</p>
+        <div class="player">
+          <audio controls preload="none" src="music/flux.mp3"></audio>
+          <a href="music/flux.mp3" target="_blank">Open file ↗</a>
+        </div>
+      </li>
+      <li class="track">
+        <div class="track-head"><span class="track-no">03</span><h3>Loam</h3></div>
+        <p>Loam centers on the earth, shaped by soil percussion, compost turning, and the grounded sounds of cultivation. Warm harmonica tones settle low in the register, evoking the richness and depth of healthy soil. Digital textures add quiet complexity, reflecting the biological activity that supports plant growth. The piece carries a sense of rootedness and steady regeneration.</p>
+        <div class="player">
+          <audio controls preload="none" src="music/loam.mp3"></audio>
+          <a href="music/loam.mp3" target="_blank">Open file ↗</a>
+        </div>
+      </li>
+      <li class="track">
+        <div class="track-head"><span class="track-no">04</span><h3>Zephyr</h3></div>
+        <p>Zephyr captures the movement of air across open fields, blending wind recordings with light harmonica bends and soft digital pads. The music drifts with the calm rhythm of breezes passing through crop rows. Subtle shifts in tone reflect changing weather and the openness of agricultural landscapes. The track holds an atmosphere of tranquility and gentle motion.</p>
+        <div class="player">
+          <audio controls preload="none" src="music/zephyr.mp3"></audio>
+          <a href="music/zephyr.mp3" target="_blank">Open file ↗</a>
+        </div>
+      </li>
+      <li class="track">
+        <div class="track-head"><span class="track-no">05</span><h3>Reaping</h3></div>
+        <p>Reaping draws from the energy of harvest days, shaped by produce handling, market sounds, and the steady activity of gathering crops. Harmonica melodies rise above these textures, highlighting the human presence within seasonal cycles. Digital instrumentation adds brightness that reflects the organization and anticipation of harvest work. The piece conveys abundance, gratitude, and the culmination of sustained effort.</p>
+        <div class="player">
+          <audio controls preload="none" src="music/reaping.mp3"></audio>
+          <a href="music/reaping.mp3" target="_blank">Open file ↗</a>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ SECTION 3 ============ -->
+  <section id="tilth-motifs">
+    <p class="section-num">III</p>
+    <h2>Tilth Motifs <span style="font-weight:400;color:var(--muted);font-size:.6em">· mini-album</span></h2>
+    <p class="intro">A mini-album built from real farm audio collected during volunteer work (drip emitters, nursery trays, pruning shears), transforming everyday agricultural sounds into musical structure.</p>
+    <div class="context">
+      <h3>Concept</h3>
+      <p>Tilth Motifs is a five-track collection shaped from real farm audio gathered during volunteer work. Drip emitters, nursery trays, pruning shears, soil textures, and ambient field sounds form the raw material for each composition. Harmonica lines and digital instrumentation guide these textures into musical form, creating a portrait of working landscapes and the quiet rhythms of cultivation. The album reflects how agricultural environments carry their own musical character and how everyday actions in the field can be transformed into expressive sound.</p>
+    </div>
+
+    <ol class="tracks">
+      <li class="track">
+        <div class="track-head"><span class="track-no">I</span><h3>First Light</h3></div>
+        <p>This opening track begins with the soft pulse of early irrigation and the faint movement of soil as morning work starts. Harmonica phrases rise gently, echoing the slow brightening of a field at dawn. Nursery tray sounds add a subtle percussive layer that suggests preparation and anticipation. The piece sets the album’s tone with a sense of calm emergence.</p>
+        <div class="player">
+          <audio controls preload="none" src="music/tilth-motifs/1-first-light.mp3"></audio>
+          <a href="music/tilth-motifs/1-first-light.mp3" target="_blank">Open file ↗</a>
+        </div>
+      </li>
+      <li class="track">
+        <div class="track-head"><span class="track-no">II</span><h3>Implements</h3></div>
+        <p>The second track centers on the sounds of tools in motion. Pruning shears, tray impacts, and small mechanical clicks create a rhythmic foundation that reflects the precision of tending young plants. Melodic lines weave through these textures, giving shape to the quiet choreography of daily tasks. The track carries an atmosphere of focus and careful attention.</p>
+        <div class="player">
+          <audio controls preload="none" src="music/tilth-motifs/2-implements.mp3"></audio>
+          <a href="music/tilth-motifs/2-implements.mp3" target="_blank">Open file ↗</a>
+        </div>
+      </li>
+      <li class="track">
+        <div class="track-head"><span class="track-no">III</span><h3>Tilth</h3></div>
+        <p>Tilth draws from soil recordings, compost movement, and the grounded textures of cultivation. Warm harmonica tones settle into the mix, reflecting the richness and depth of prepared earth. Digital harmonies add quiet complexity, suggesting the biological activity that supports growth. The piece holds a sense of steadiness and renewal.</p>
+        <div class="player">
+          <audio controls preload="none" src="music/tilth-motifs/3-tilth.mp3"></audio>
+          <a href="music/tilth-motifs/3-tilth.mp3" target="_blank">Open file ↗</a>
+        </div>
+      </li>
+      <li class="track">
+        <div class="track-head"><span class="track-no">IV</span><h3>Field Air</h3></div>
+        <p>Wind recordings captured between crop rows form the core of this track. Light harmonica bends drift through the soundscape, creating a feeling of openness and movement. Soft digital pads reflect the shifting atmosphere of outdoor work and the calm continuity of agricultural spaces. The track carries a gentle, expansive mood.</p>
+        <div class="player">
+          <audio controls preload="none" src="music/tilth-motifs/4-field-air.mp3"></audio>
+          <a href="music/tilth-motifs/4-field-air.mp3" target="_blank">Open file ↗</a>
+        </div>
+      </li>
+      <li class="track">
+        <div class="track-head"><span class="track-no">V</span><h3>Gather</h3></div>
+        <p>The final track draws from the energy of harvest and community activity. Produce handling, market ambience, and nursery workflow sounds create a textured backdrop. Harmonica melodies rise above these layers, highlighting the human presence within seasonal cycles. The piece closes the album with a sense of completion, abundance, and shared effort.</p>
+        <div class="player">
+          <audio controls preload="none" src="music/tilth-motifs/5-gather.mp3"></audio>
+          <a href="music/tilth-motifs/5-gather.mp3" target="_blank">Open file ↗</a>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">© Grant Zhong · Harmonica, field recordings, and digital instrumentation.</div>
+</footer>
+
+</body>
+</html>
