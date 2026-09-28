@@ -18,6 +18,7 @@
     --accent: #4d7c3a;
     --accent-soft: #e5eedb;
     --soil: #7a5a3a;
+    --staff: #c9c0ab;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
@@ -29,6 +30,7 @@
       --accent: #8fc46f;
       --accent-soft: #26331f;
       --soil: #c9a27a;
+      --staff: #465041;
     }
   }
   :root[data-theme="dark"] {
@@ -40,6 +42,7 @@
     --accent: #8fc46f;
     --accent-soft: #26331f;
     --soil: #c9a27a;
+    --staff: #465041;
   }
 
   * { box-sizing: border-box; }
@@ -70,10 +73,26 @@
 
   section { padding: 56px 0; border-bottom: 1px solid var(--line); }
   section:last-of-type { border-bottom: 0; }
-  .section-num { font-family: Fraunces, Georgia, serif; color: var(--soil); font-size: 15px; margin: 0 0 6px; }
+  .section-mark { display: flex; align-items: center; gap: 20px; margin: 0 0 18px; }
+  .mvt-num {
+    flex: none; min-width: 1.5em; font-family: Fraunces, Georgia, serif; font-style: italic;
+    font-weight: 600; font-size: clamp(56px, 10vw, 84px); line-height: .9; color: var(--accent);
+  }
+  .staff {
+    position: relative; flex: 1; height: 33px; color: var(--soil);
+    background: repeating-linear-gradient(to bottom, var(--staff) 0 1px, transparent 1px 8px);
+  }
+  .staff::after {
+    content: ""; position: absolute; right: 0; top: 0; bottom: 0; width: 6px;
+    border-left: 1.5px solid var(--staff); border-right: 4px solid var(--staff);
+  }
+  .notes { position: absolute; left: 14px; top: 0; }
+  .mvt-label {
+    position: absolute; right: 18px; top: -24px; font-size: 12px; font-weight: 600;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
+  }
   h2 { font-size: clamp(26px, 4vw, 34px); margin: 0 0 14px; }
-  .intro { color: var(--muted); max-width: 680px; margin: 0 0 12px; }
-  .context {
+    .context {
     background: var(--accent-soft); border-left: 3px solid var(--accent);
     padding: 16px 20px; border-radius: 6px; margin: 20px 0 8px; max-width: 700px;
   }
@@ -108,7 +127,7 @@
   <div class="wrap">
     <p class="eyebrow">Original Music</p>
     <h1>Sound from Working Land</h1>
-    <p class="lede">Compositions built from harmonica, digital instrumentation, and real farm audio: drip emitters, soil, nursery tools, wind through crop rows, and the sounds of harvest.</p>
+    <p class="lede">Every farm keeps time. Drip emitters tick like metronomes, soil answers like a drum, pruning shears snap in counterpoint, and wind turns whole crop rows into a slow, shifting chord. I recorded those sounds in real fields, nurseries, and packing houses, then built them into music with harmonica and digital instrumentation.</p>
     <nav>
       <a href="#compositions">Ten Original Pieces</a>
       <a href="#portfolio">Recorded Portfolio</a>
@@ -121,9 +140,11 @@
 
   <!-- ============ SECTION 1 ============ -->
   <section id="compositions">
-    <p class="section-num">I</p>
+    <div class="section-mark" aria-hidden="true"><span class="mvt-num">I</span><span class="staff"><span class="mvt-label">Movement I</span><svg class="notes" width="140" height="33" viewBox="0 0 140 33" overflow="visible" fill="currentColor"><ellipse cx="14" cy="28.5" rx="5.2" ry="3.7" transform="rotate(-20 14 28.5)"/><line x1="19" y1="28.5" x2="19" y2="4.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="40" cy="24.5" rx="5.2" ry="3.7" transform="rotate(-20 40 24.5)"/><line x1="45" y1="24.5" x2="45" y2="0.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="66" cy="20.5" rx="5.2" ry="3.7" transform="rotate(-20 66 20.5)"/><line x1="71" y1="20.5" x2="71" y2="-3.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="92" cy="16.5" rx="5.2" ry="3.7" transform="rotate(-20 92 16.5)"/><line x1="97" y1="16.5" x2="97" y2="-7.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="118" cy="12.5" rx="5.2" ry="3.7" transform="rotate(-20 118 12.5)"/><line x1="123" y1="12.5" x2="123" y2="-11.5" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
     <h2>Ten Original Pieces</h2>
-    <p class="intro">Ten original pieces inspired by agricultural rhythms, natural soundscapes, and environmental cycles, including themes based on irrigation flow patterns, soil percussion, and farm-ambient field recordings.</p>
+    <div class="context">
+      <p>Each of these ten pieces starts with a single agricultural rhythm and follows it wherever it leads. The steady pulse of a drip line becomes counterpoint; soil and seedling trays become a percussion section; compost, irrigation basins, and aquaponic loops become etudes and variations about cycles that never stop turning. Farmers markets and packing-house shifts bring in the human side: the voices, hands, and teamwork that carry food from field to table.</p>
+    </div>
 
     <ol class="tracks">
       <li class="track">
@@ -211,9 +232,8 @@
 
   <!-- ============ SECTION 2 ============ -->
   <section id="portfolio">
-    <p class="section-num">II</p>
+    <div class="section-mark" aria-hidden="true"><span class="mvt-num">II</span><span class="staff"><span class="mvt-label">Movement II</span><svg class="notes" width="140" height="33" viewBox="0 0 140 33" overflow="visible" fill="currentColor"><ellipse cx="14" cy="20.5" rx="5.2" ry="3.7" transform="rotate(-20 14 20.5)"/><line x1="19" y1="20.5" x2="19" y2="-3.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="40" cy="12.5" rx="5.2" ry="3.7" transform="rotate(-20 40 12.5)"/><line x1="45" y1="12.5" x2="45" y2="-11.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="66" cy="16.5" rx="5.2" ry="3.7" transform="rotate(-20 66 16.5)"/><line x1="71" y1="16.5" x2="71" y2="-7.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="92" cy="8.5" rx="5.2" ry="3.7" transform="rotate(-20 92 8.5)"/><line x1="97" y1="8.5" x2="97" y2="-15.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="118" cy="12.5" rx="5.2" ry="3.7" transform="rotate(-20 118 12.5)"/><line x1="123" y1="12.5" x2="123" y2="-11.5" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
     <h2>Recorded Portfolio</h2>
-    <p class="intro">Five recorded tracks that blend harmonica, natural samples (running water, wind through crops, nursery tools), and digital instrumentation to explore the connection between sound and sustainable farming practices.</p>
     <div class="context">
       <p>This portfolio brings together harmonica, field recordings, and digital instrumentation to interpret the atmosphere of working landscapes. Each track draws from moments in agricultural settings, from the movement of water to the quiet weight of soil and the energy of harvest days. Natural sounds collected during farm and nursery work form the foundation, while melodic lines and digital textures shape them into expressive compositions. The collection reflects how environmental processes carry their own rhythm and how everyday scenes in sustainable agriculture can be translated into music.</p>
     </div>
@@ -264,9 +284,8 @@
 
   <!-- ============ SECTION 3 ============ -->
   <section id="tilth-motifs">
-    <p class="section-num">III</p>
+    <div class="section-mark" aria-hidden="true"><span class="mvt-num">III</span><span class="staff"><span class="mvt-label">Movement III</span><svg class="notes" width="140" height="33" viewBox="0 0 140 33" overflow="visible" fill="currentColor"><ellipse cx="14" cy="8.5" rx="5.2" ry="3.7" transform="rotate(-20 14 8.5)"/><line x1="19" y1="8.5" x2="19" y2="-15.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="40" cy="16.5" rx="5.2" ry="3.7" transform="rotate(-20 40 16.5)"/><line x1="45" y1="16.5" x2="45" y2="-7.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="66" cy="12.5" rx="5.2" ry="3.7" transform="rotate(-20 66 12.5)"/><line x1="71" y1="12.5" x2="71" y2="-11.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="92" cy="20.5" rx="5.2" ry="3.7" transform="rotate(-20 92 20.5)"/><line x1="97" y1="20.5" x2="97" y2="-3.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="118" cy="16.5" rx="5.2" ry="3.7" transform="rotate(-20 118 16.5)"/><line x1="123" y1="16.5" x2="123" y2="-7.5" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
     <h2>Tilth Motifs <span style="font-weight:400;color:var(--muted);font-size:.6em">· mini-album</span></h2>
-    <p class="intro">A mini-album built from real farm audio collected during volunteer work (drip emitters, nursery trays, pruning shears), transforming everyday agricultural sounds into musical structure.</p>
     <div class="context">
       <h3>Concept</h3>
       <p>Tilth Motifs is a five-track collection shaped from real farm audio gathered during volunteer work. Drip emitters, nursery trays, pruning shears, soil textures, and ambient field sounds form the raw material for each composition. Harmonica lines and digital instrumentation guide these textures into musical form, creating a portrait of working landscapes and the quiet rhythms of cultivation. The album reflects how agricultural environments carry their own musical character and how everyday actions in the field can be transformed into expressive sound.</p>
