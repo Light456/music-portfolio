@@ -3,343 +3,151 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Grant Zhong — Compositions</title>
-<meta name="description" content="Original music by Grant Zhong built from harmonica, farm field recordings, and digital instrumentation.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<title>Grant Zhong</title>
+<meta name="description" content="Ten pieces to listen to.">
+<link rel="icon" href="data:,">
 <style>
-  :root {
-    --bg: #f6f3ec;
-    --surface: #fffdf8;
-    --ink: #1f2a1f;
-    --muted: #5b6657;
-    --line: #e2dccd;
-    --accent: #4d7c3a;
-    --accent-soft: #e5eedb;
-    --soil: #7a5a3a;
-    --staff: #c9c0ab;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #141812;
-      --surface: #1c211a;
-      --ink: #e8ece2;
-      --muted: #a3ad9c;
-      --line: #2f372b;
-      --accent: #8fc46f;
-      --accent-soft: #26331f;
-      --soil: #c9a27a;
-      --staff: #465041;
-    }
-  }
-  :root[data-theme="dark"] {
-    --bg: #141812;
-    --surface: #1c211a;
-    --ink: #e8ece2;
-    --muted: #a3ad9c;
-    --line: #2f372b;
-    --accent: #8fc46f;
-    --accent-soft: #26331f;
-    --soil: #c9a27a;
-    --staff: #465041;
-  }
-
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font: 16px/1.65 Inter, system-ui, sans-serif;
+    padding: clamp(32px, 8vw, 96px) clamp(20px, 7vw, 112px);
+    background: #fff;
+    color: #000;
+    font: 1.125rem/1.4 Optima, Candara, "Noto Sans", sans-serif;
   }
-  .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+  h1 { font-size: 1.125rem; font-weight: 700; margin: 0 0 clamp(32px, 6vw, 64px); }
 
-  header { padding: 72px 0 40px; border-bottom: 1px solid var(--line); }
-  .eyebrow {
-    font-size: 13px; font-weight: 600; letter-spacing: .12em;
-    text-transform: uppercase; color: var(--accent); margin: 0 0 12px;
+  .intro { max-width: 46rem; margin: 0 0 clamp(32px, 6vw, 64px); }
+  h1 { margin-bottom: 16px; }
+  ol { list-style: none; margin: 0; padding: 0; max-width: 46rem; }
+  li { padding: 2px 0; }
+  .row { display: flex; align-items: baseline; gap: 16px; }
+  .song {
+    flex: 1; min-width: 0;
+    display: flex; align-items: baseline; gap: 16px;
+    padding: 8px 0; border: 0; background: none;
+    color: inherit; font: inherit; line-height: 1.2; text-align: left; text-decoration: none;
+    font-size: clamp(1.375rem, 4.5vw, 2.125rem);
+    cursor: pointer;
   }
-  h1, h2, h3 { font-family: Fraunces, Georgia, serif; font-weight: 600; line-height: 1.2; }
-  h1 { font-size: clamp(34px, 6vw, 52px); margin: 0 0 16px; }
-  header p.lede { font-size: 18px; color: var(--muted); max-width: 640px; margin: 0; }
-
-  nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
-  nav a {
-    font-size: 14px; font-weight: 500; text-decoration: none; color: var(--ink);
-    border: 1px solid var(--line); background: var(--surface);
-    padding: 6px 14px; border-radius: 999px;
-  }
-  nav a:hover { border-color: var(--accent); color: var(--accent); }
-
-  section { padding: 56px 0; border-bottom: 1px solid var(--line); }
-  section:last-of-type { border-bottom: 0; }
-  .section-mark { display: flex; align-items: center; gap: 20px; margin: 0 0 18px; }
-  .mvt-num {
-    flex: none; min-width: 1.5em; font-family: Fraunces, Georgia, serif; font-style: italic;
-    font-weight: 600; font-size: clamp(56px, 10vw, 84px); line-height: .9; color: var(--accent);
-  }
-  .staff {
-    position: relative; flex: 1; height: 33px; color: var(--soil);
-    background: repeating-linear-gradient(to bottom, var(--staff) 0 1px, transparent 1px 8px);
-  }
-  .staff::after {
-    content: ""; position: absolute; right: 0; top: 0; bottom: 0; width: 6px;
-    border-left: 1.5px solid var(--staff); border-right: 4px solid var(--staff);
-  }
-  .notes { position: absolute; left: 14px; top: 0; }
-  .mvt-label {
-    position: absolute; right: 18px; top: -24px; font-size: 12px; font-weight: 600;
-    letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
-  }
-  h2 { font-size: clamp(26px, 4vw, 34px); margin: 0 0 14px; }
-    .context {
-    background: var(--accent-soft); border-left: 3px solid var(--accent);
-    padding: 16px 20px; border-radius: 6px; margin: 20px 0 8px; max-width: 700px;
-  }
-  .context h3 { font-size: 17px; margin: 0 0 6px; }
-  .context p { margin: 0; }
-
-  .tracks { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 16px; }
-  .track {
-    background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
-    padding: 20px 22px;
-  }
-  .track-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px; }
-  .track-no {
-    flex: none; font-family: Fraunces, Georgia, serif; font-size: 14px;
-    color: var(--soil); min-width: 26px;
-  }
-  .track h3 { font-size: 21px; margin: 0; }
-  .track p { margin: 0 0 14px; color: var(--ink); }
-  .player { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
-  .player audio { flex: 1 1 260px; min-width: 0; width: 100%; height: 40px; }
-  .player a {
-    font-size: 14px; font-weight: 500; color: var(--accent); text-decoration: none; white-space: nowrap;
-  }
-  .player a:hover { text-decoration: underline; }
-
-  footer { padding: 32px 0 56px; color: var(--muted); font-size: 14px; }
+  .song:hover, .current .song { color: #0a4fb3; }
+  .song:focus-visible, .seek:focus-visible { outline: 2px solid #0a4fb3; outline-offset: 3px; }
+  .song svg { flex: none; width: .6em; height: .6em; fill: currentColor; }
+  .time { flex: none; font-variant-numeric: tabular-nums; }
+  .seek { display: block; width: 100%; height: 28px; margin: 0; accent-color: #0a4fb3; cursor: pointer; }
+  .error { margin: 0 0 8px; color: #a11212; }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="wrap">
-    <p class="eyebrow">Original Music</p>
-    <h1>Sound from Working Land</h1>
-    <p class="lede">Every farm keeps time. Drip emitters tick like metronomes, soil answers like a drum, pruning shears snap in counterpoint, and wind turns whole crop rows into a slow, shifting chord. I recorded those sounds in real fields, nurseries, and packing houses, then built them into music with harmonica and digital instrumentation.</p>
-    <nav>
-      <a href="#compositions">Ten Original Pieces</a>
-      <a href="#portfolio">Recorded Portfolio</a>
-      <a href="#tilth-motifs">Tilth Motifs</a>
-    </nav>
-  </div>
-</header>
+<h1>Grant Zhong</h1>
 
-<main class="wrap">
+<p class="intro">Hello! I am Grant Zhong. I have worked at farms such as Passion Farm in Gilroy, and I've composed some of the sounds that I've heard into this portfolio. These sounds may come from fields and nurseries. I have created the following compositions with Garageband. These ten pieces all start with a single agricultural rhythm and follows it.</p>
 
-  <!-- ============ SECTION 1 ============ -->
-  <section id="compositions">
-    <div class="section-mark" aria-hidden="true"><span class="mvt-num">I</span><span class="staff"><span class="mvt-label">Movement I</span><svg class="notes" width="140" height="33" viewBox="0 0 140 33" overflow="visible" fill="currentColor"><ellipse cx="14" cy="28.5" rx="5.2" ry="3.7" transform="rotate(-20 14 28.5)"/><line x1="19" y1="28.5" x2="19" y2="4.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="40" cy="24.5" rx="5.2" ry="3.7" transform="rotate(-20 40 24.5)"/><line x1="45" y1="24.5" x2="45" y2="0.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="66" cy="20.5" rx="5.2" ry="3.7" transform="rotate(-20 66 20.5)"/><line x1="71" y1="20.5" x2="71" y2="-3.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="92" cy="16.5" rx="5.2" ry="3.7" transform="rotate(-20 92 16.5)"/><line x1="97" y1="16.5" x2="97" y2="-7.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="118" cy="12.5" rx="5.2" ry="3.7" transform="rotate(-20 118 12.5)"/><line x1="123" y1="12.5" x2="123" y2="-11.5" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
-    <h2>Ten Original Pieces</h2>
-    <div class="context">
-      <p>Each of these ten pieces starts with a single agricultural rhythm and follows it wherever it leads. The steady pulse of a drip line becomes counterpoint; soil and seedling trays become a percussion section; compost, irrigation basins, and aquaponic loops become etudes and variations about cycles that never stop turning. Farmers markets and packing-house shifts bring in the human side: the voices, hands, and teamwork that carry food from field to table.</p>
-    </div>
-
-    <ol class="tracks">
-      <li class="track">
-        <div class="track-head"><span class="track-no">01</span><h3>Dripline Counterpoint</h3></div>
-        <p>This piece draws its structure from the steady, metronomic pulses of drip-irrigation emitters. The repeating water rhythms form the backbone of the composition, creating a counterpoint between natural flow and human-engineered precision. As layers build, the music mirrors how irrigation networks distribute life across a field. The piece expresses quiet efficiency and the subtle beauty of controlled water movement.</p>
-        <div class="player">
-          <audio controls preload="metadata" src="music/%2801-01%29%20Dripline%20Counterpoint.mp3"></audio>
-          <a href="music/%2801-01%29%20Dripline%20Counterpoint.mp3" target="_blank">Open file ↗</a>
-        </div>
-      </li>
-      <li class="track">
-        <div class="track-head"><span class="track-no">02</span><h3>Soil Percussion Study</h3></div>
-        <p>Inspired by the tactile sounds of planting and soil work, this piece uses ground impacts, granular textures, and tray taps as its percussive foundation. Each rhythm reflects the physicality of cultivation — digging, pressing, and shaping earth. The composition explores how soil carries both weight and resonance. It evokes the grounded, cyclical labor that sustains agricultural ecosystems.</p>
-        <div class="player">
-          <audio controls preload="metadata" src="music/%2801-02%29%20Soil%20Percussion%20Study.mp3"></audio>
-          <a href="music/%2801-02%29%20Soil%20Percussion%20Study.mp3" target="_blank">Open file ↗</a>
-        </div>
-      </li>
-      <li class="track">
-        <div class="track-head"><span class="track-no">03</span><h3>Nursery Tools Sonata</h3></div>
-        <p>This sonata transforms everyday nursery tools into musical voices: pruning-shear clicks, seedling-tray rattles, and soft brush movements. The piece highlights the delicate choreography of tending young plants, where small motions accumulate into meaningful care. Melodic lines weave through these tactile sounds, suggesting growth and quiet attention. It expresses the intimacy of working closely with living things.</p>
-        <div class="player">
-          <audio controls preload="metadata" src="music/%2801-03%29%20Nursery%20Tools%20Sonata.mp3"></audio>
-          <a href="music/%2801-03%29%20Nursery%20Tools%20Sonata.mp3" target="_blank">Open file ↗</a>
-        </div>
-      </li>
-      <li class="track">
-        <div class="track-head"><span class="track-no">04</span><h3>Wind Through Rows</h3></div>
-        <p>Built from harmonica lines blended with filtered field recordings, this piece captures the sensation of wind moving through crop rows. The music drifts and bends like air weaving between plants, creating a sense of openness and breath. Subtle shifts in tone mirror changing weather and seasonal transitions. The piece evokes calm, continuity, and the slow passage of time across farmland.</p>
-        <div class="player">
-          <audio controls preload="metadata" src="music/%2801-04%29%20Wind%20Through%20Rows.mp3"></audio>
-          <a href="music/%2801-04%29%20Wind%20Through%20Rows.mp3" target="_blank">Open file ↗</a>
-        </div>
-      </li>
-      <li class="track">
-        <div class="track-head"><span class="track-no">05</span><h3>Aquaponic Currents</h3></div>
-        <p>Inspired by the circulating flows of my aquaponics system, this composition uses water tones, pump hums, and gentle melodic arcs to represent nutrient cycling. The piece moves in loops, echoing the closed-loop harmony between fish, plants, and water. Its textures feel fluid and self-sustaining, reflecting the elegance of ecological balance. It expresses renewal, interdependence, and quiet motion.</p>
-        <div class="player">
-          <audio controls preload="metadata" src="music/%2801-05%29%20Aquaponic%20Currents.mp3"></audio>
-          <a href="music/%2801-05%29%20Aquaponic%20Currents.mp3" target="_blank">Open file ↗</a>
-        </div>
-      </li>
-      <li class="track">
-        <div class="track-head"><span class="track-no">06</span><h3>Compost Cycle Etude</h3></div>
-        <p>This etude explores the transformation of organic matter through layered, earthy sounds: compost turning, soil mixing, and soft decomposition textures. The rhythms mimic the slow breakdown and rebirth inherent in regenerative agriculture. Melodic fragments emerge like new growth rising from amended soil. The piece expresses patience, renewal, and the unseen processes that sustain life.</p>
-        <div class="player">
-          <audio controls preload="metadata" src="music/%2801-06%29%20Compost%20Cycle%20Etude.mp3"></audio>
-          <a href="music/%2801-06%29%20Compost%20Cycle%20Etude.mp3" target="_blank">Open file ↗</a>
-        </div>
-      </li>
-      <li class="track">
-        <div class="track-head"><span class="track-no">07</span><h3>Irrigation Basin Variations</h3></div>
-        <p>Structured as a set of variations, this piece reflects the dynamic behavior of basin-scale irrigation — pressure shifts, flow changes, and water redistribution. Each variation introduces a new pattern, mirroring how water behaves differently across terrain and system design. The music moves between calm expanses and energetic surges. It expresses the complexity and adaptability of large-scale water management.</p>
-        <div class="player">
-          <audio controls preload="metadata" src="music/%2801-07%29%20Irrigation%20Basin%20Variations.mp3"></audio>
-          <a href="music/%2801-07%29%20Irrigation%20Basin%20Variations.mp3" target="_blank">Open file ↗</a>
-        </div>
-      </li>
-      <li class="track">
-        <div class="track-head"><span class="track-no">08</span><h3>Farmers Market Overture</h3></div>
-        <p>This overture captures the lively atmosphere of farmers markets: produce bins shifting, tent fabric fluttering, and the ambient hum of community exchange. Bright harmonies evoke morning energy and the optimism of local agriculture. Rhythmic motifs reflect movement — vendors setting up, customers browsing, conversations unfolding. The piece expresses vibrancy, connection, and the social heartbeat of sustainable food systems.</p>
-        <div class="player">
-          <audio controls preload="metadata" src="music/%2801-08%29%20Farmers%20Market%20Overture.mp3"></audio>
-          <a href="music/%2801-08%29%20Farmers%20Market%20Overture.mp3" target="_blank">Open file ↗</a>
-        </div>
-      </li>
-      <li class="track">
-        <div class="track-head"><span class="track-no">09</span><h3>Packing House Polyphony</h3></div>
-        <p>Inspired by my Second Harvest volunteer work, this piece arranges sorting, lifting, and produce-movement sounds into interlocking musical lines. The polyphonic structure mirrors the coordinated flow of a packing shift, where many hands contribute to a shared purpose. The rhythms are steady, purposeful, and communal. It expresses teamwork, generosity, and the quiet dignity of food distribution.</p>
-        <div class="player">
-          <audio controls preload="metadata" src="music/%2801-09%29%20Packing%20House%20Polyphony.mp3"></audio>
-          <a href="music/%2801-09%29%20Packing%20House%20Polyphony.mp3" target="_blank">Open file ↗</a>
-        </div>
-      </li>
-      <li class="track">
-        <div class="track-head"><span class="track-no">10</span><h3>Field Hands Reverie</h3></div>
-        <p>This reflective piece centers on the subtle gestures of farm and garden work — planting, mulching, watering, and tending. Soft harmonica lines blend with ambient field recordings to create a contemplative atmosphere. The music highlights the human presence behind sustainable agriculture, focusing on care rather than machinery. It expresses humility, devotion, and the quiet reverie found in hands-on stewardship of land.</p>
-        <div class="player">
-          <audio controls preload="metadata" src="music/%2801-10%29%20Field%20Hands%20Reverie.mp3"></audio>
-          <a href="music/%2801-10%29%20Field%20Hands%20Reverie.mp3" target="_blank">Open file ↗</a>
-        </div>
-      </li>
-    </ol>
-  </section>
-
-  <!-- ============ SECTION 2 ============ -->
-  <section id="portfolio">
-    <div class="section-mark" aria-hidden="true"><span class="mvt-num">II</span><span class="staff"><span class="mvt-label">Movement II</span><svg class="notes" width="140" height="33" viewBox="0 0 140 33" overflow="visible" fill="currentColor"><ellipse cx="14" cy="20.5" rx="5.2" ry="3.7" transform="rotate(-20 14 20.5)"/><line x1="19" y1="20.5" x2="19" y2="-3.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="40" cy="12.5" rx="5.2" ry="3.7" transform="rotate(-20 40 12.5)"/><line x1="45" y1="12.5" x2="45" y2="-11.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="66" cy="16.5" rx="5.2" ry="3.7" transform="rotate(-20 66 16.5)"/><line x1="71" y1="16.5" x2="71" y2="-7.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="92" cy="8.5" rx="5.2" ry="3.7" transform="rotate(-20 92 8.5)"/><line x1="97" y1="8.5" x2="97" y2="-15.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="118" cy="12.5" rx="5.2" ry="3.7" transform="rotate(-20 118 12.5)"/><line x1="123" y1="12.5" x2="123" y2="-11.5" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
-    <h2>Recorded Portfolio</h2>
-    <div class="context">
-      <p>This portfolio brings together harmonica, field recordings, and digital instrumentation to interpret the atmosphere of working landscapes. Each track draws from moments in agricultural settings, from the movement of water to the quiet weight of soil and the energy of harvest days. Natural sounds collected during farm and nursery work form the foundation, while melodic lines and digital textures shape them into expressive compositions. The collection reflects how environmental processes carry their own rhythm and how everyday scenes in sustainable agriculture can be translated into music.</p>
-    </div>
-
-    <ol class="tracks">
-      <li class="track">
-        <div class="track-head"><span class="track-no">01</span><h3>Verdure</h3></div>
-        <p>Verdure reflects the vitality of growing spaces, shaped by leaf rustles, soft soil movement, and the gentle presence of nursery beds. Harmonica lines rise with a sense of emergence, echoing the early stages of plant life. Digital harmonies deepen the texture, suggesting layers of growth beneath the surface. The piece carries an atmosphere of renewal and quiet flourishing.</p>
-        <div class="player">
-          <audio controls preload="metadata" src="music/%2802-01%29%20Verdure.mp3"></audio>
-          <a href="music/%2802-01%29%20Verdure.mp3" target="_blank">Open file ↗</a>
-        </div>
-      </li>
-      <li class="track">
-        <div class="track-head"><span class="track-no">02</span><h3>Flux</h3></div>
-        <p>Flux follows the motion of water across farmland, guided by irrigation pulses, flowing streams, and subtle mechanical hums. Harmonica motifs move fluidly through these sounds, mirroring the shifting patterns of water in the field. Digital elements provide structure that hints at the design behind modern irrigation systems. The track conveys movement, change, and the essential role of water in sustaining crops.</p>
-        <div class="player">
-          <audio controls preload="metadata" src="music/%2802-02%29%20Flux.mp3"></audio>
-          <a href="music/%2802-02%29%20Flux.mp3" target="_blank">Open file ↗</a>
-        </div>
-      </li>
-      <li class="track">
-        <div class="track-head"><span class="track-no">03</span><h3>Loam</h3></div>
-        <p>Loam centers on the earth, shaped by soil percussion, compost turning, and the grounded sounds of cultivation. Warm harmonica tones settle low in the register, evoking the richness and depth of healthy soil. Digital textures add quiet complexity, reflecting the biological activity that supports plant growth. The piece carries a sense of rootedness and steady regeneration.</p>
-        <div class="player">
-          <audio controls preload="metadata" src="music/%2802-03%29%20Loam.mp3"></audio>
-          <a href="music/%2802-03%29%20Loam.mp3" target="_blank">Open file ↗</a>
-        </div>
-      </li>
-      <li class="track">
-        <div class="track-head"><span class="track-no">04</span><h3>Zephyr</h3></div>
-        <p>Zephyr captures the movement of air across open fields, blending wind recordings with light harmonica bends and soft digital pads. The music drifts with the calm rhythm of breezes passing through crop rows. Subtle shifts in tone reflect changing weather and the openness of agricultural landscapes. The track holds an atmosphere of tranquility and gentle motion.</p>
-        <div class="player">
-          <audio controls preload="metadata" src="music/%2802-04%29%20Zephyr.mp3"></audio>
-          <a href="music/%2802-04%29%20Zephyr.mp3" target="_blank">Open file ↗</a>
-        </div>
-      </li>
-      <li class="track">
-        <div class="track-head"><span class="track-no">05</span><h3>Reaping</h3></div>
-        <p>Reaping draws from the energy of harvest days, shaped by produce handling, market sounds, and the steady activity of gathering crops. Harmonica melodies rise above these textures, highlighting the human presence within seasonal cycles. Digital instrumentation adds brightness that reflects the organization and anticipation of harvest work. The piece conveys abundance, gratitude, and the culmination of sustained effort.</p>
-        <div class="player">
-          <audio controls preload="metadata" src="music/%2802-05%29%20Reaping.mp3"></audio>
-          <a href="music/%2802-05%29%20Reaping.mp3" target="_blank">Open file ↗</a>
-        </div>
-      </li>
-    </ol>
-  </section>
-
-  <!-- ============ SECTION 3 ============ -->
-  <section id="tilth-motifs">
-    <div class="section-mark" aria-hidden="true"><span class="mvt-num">III</span><span class="staff"><span class="mvt-label">Movement III</span><svg class="notes" width="140" height="33" viewBox="0 0 140 33" overflow="visible" fill="currentColor"><ellipse cx="14" cy="8.5" rx="5.2" ry="3.7" transform="rotate(-20 14 8.5)"/><line x1="19" y1="8.5" x2="19" y2="-15.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="40" cy="16.5" rx="5.2" ry="3.7" transform="rotate(-20 40 16.5)"/><line x1="45" y1="16.5" x2="45" y2="-7.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="66" cy="12.5" rx="5.2" ry="3.7" transform="rotate(-20 66 12.5)"/><line x1="71" y1="12.5" x2="71" y2="-11.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="92" cy="20.5" rx="5.2" ry="3.7" transform="rotate(-20 92 20.5)"/><line x1="97" y1="20.5" x2="97" y2="-3.5" stroke="currentColor" stroke-width="1.6"/><ellipse cx="118" cy="16.5" rx="5.2" ry="3.7" transform="rotate(-20 118 16.5)"/><line x1="123" y1="16.5" x2="123" y2="-7.5" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
-    <h2>Tilth Motifs <span style="font-weight:400;color:var(--muted);font-size:.6em">· mini-album</span></h2>
-    <div class="context">
-      <h3>Concept</h3>
-      <p>Tilth Motifs is a five-track collection shaped from real farm audio gathered during volunteer work. Drip emitters, nursery trays, pruning shears, soil textures, and ambient field sounds form the raw material for each composition. Harmonica lines and digital instrumentation guide these textures into musical form, creating a portrait of working landscapes and the quiet rhythms of cultivation. The album reflects how agricultural environments carry their own musical character and how everyday actions in the field can be transformed into expressive sound.</p>
-    </div>
-
-    <ol class="tracks">
-      <li class="track">
-        <div class="track-head"><span class="track-no">I</span><h3>First Light</h3></div>
-        <p>This opening track begins with the soft pulse of early irrigation and the faint movement of soil as morning work starts. Harmonica phrases rise gently, echoing the slow brightening of a field at dawn. Nursery tray sounds add a subtle percussive layer that suggests preparation and anticipation. The piece sets the album’s tone with a sense of calm emergence.</p>
-        <div class="player">
-          <audio controls preload="metadata" src="music/%2803-01%29%20First%20Light.mp3"></audio>
-          <a href="music/%2803-01%29%20First%20Light.mp3" target="_blank">Open file ↗</a>
-        </div>
-      </li>
-      <li class="track">
-        <div class="track-head"><span class="track-no">II</span><h3>Implements</h3></div>
-        <p>The second track centers on the sounds of tools in motion. Pruning shears, tray impacts, and small mechanical clicks create a rhythmic foundation that reflects the precision of tending young plants. Melodic lines weave through these textures, giving shape to the quiet choreography of daily tasks. The track carries an atmosphere of focus and careful attention.</p>
-        <div class="player">
-          <audio controls preload="metadata" src="music/%2803-02%29%20Implements.mp3"></audio>
-          <a href="music/%2803-02%29%20Implements.mp3" target="_blank">Open file ↗</a>
-        </div>
-      </li>
-      <li class="track">
-        <div class="track-head"><span class="track-no">III</span><h3>Tilth</h3></div>
-        <p>Tilth draws from soil recordings, compost movement, and the grounded textures of cultivation. Warm harmonica tones settle into the mix, reflecting the richness and depth of prepared earth. Digital harmonies add quiet complexity, suggesting the biological activity that supports growth. The piece holds a sense of steadiness and renewal.</p>
-        <div class="player">
-          <audio controls preload="metadata" src="music/%2803-03%29%20Tilth.mp3"></audio>
-          <a href="music/%2803-03%29%20Tilth.mp3" target="_blank">Open file ↗</a>
-        </div>
-      </li>
-      <li class="track">
-        <div class="track-head"><span class="track-no">IV</span><h3>Field Air</h3></div>
-        <p>Wind recordings captured between crop rows form the core of this track. Light harmonica bends drift through the soundscape, creating a feeling of openness and movement. Soft digital pads reflect the shifting atmosphere of outdoor work and the calm continuity of agricultural spaces. The track carries a gentle, expansive mood.</p>
-        <div class="player">
-          <audio controls preload="metadata" src="music/%2803-04%29%20Field%20Air.mp3"></audio>
-          <a href="music/%2803-04%29%20Field%20Air.mp3" target="_blank">Open file ↗</a>
-        </div>
-      </li>
-      <li class="track">
-        <div class="track-head"><span class="track-no">V</span><h3>Gather</h3></div>
-        <p>The final track draws from the energy of harvest and community activity. Produce handling, market ambience, and nursery workflow sounds create a textured backdrop. Harmonica melodies rise above these layers, highlighting the human presence within seasonal cycles. The piece closes the album with a sense of completion, abundance, and shared effort.</p>
-        <div class="player">
-          <audio controls preload="metadata" src="music/%2803-05%29%20Gather.mp3"></audio>
-          <a href="music/%2803-05%29%20Gather.mp3" target="_blank">Open file ↗</a>
-        </div>
-      </li>
-    </ol>
-  </section>
-
+<main>
+  <ol>
+    <li><div class="row"><a class="song" href="music/%2801-01%29%20Dripline%20Counterpoint.mp3">Dripline Counterpoint</a><span class="time">2:10</span></div></li>
+    <li><div class="row"><a class="song" href="music/%2801-02%29%20Soil%20Percussion%20Study.mp3">Soil Percussion Study</a><span class="time">1:46</span></div></li>
+    <li><div class="row"><a class="song" href="music/%2801-03%29%20Nursery%20Tools%20Sonata.mp3">Nursery Tools Sonata</a><span class="time">2:21</span></div></li>
+    <li><div class="row"><a class="song" href="music/%2801-04%29%20Wind%20Through%20Rows.mp3">Wind Through Rows</a><span class="time">2:34</span></div></li>
+    <li><div class="row"><a class="song" href="music/%2801-05%29%20Aquaponic%20Currents.mp3">Aquaponic Currents</a><span class="time">1:47</span></div></li>
+    <li><div class="row"><a class="song" href="music/%2801-06%29%20Compost%20Cycle%20Etude.mp3">Compost Cycle Etude</a><span class="time">2:11</span></div></li>
+    <li><div class="row"><a class="song" href="music/%2801-07%29%20Irrigation%20Basin%20Variations.mp3">Irrigation Basin Variations</a><span class="time">2:26</span></div></li>
+    <li><div class="row"><a class="song" href="music/%2801-08%29%20Farmers%20Market%20Overture.mp3">Farmers Market Overture</a><span class="time">1:36</span></div></li>
+    <li><div class="row"><a class="song" href="music/%2801-09%29%20Packing%20House%20Polyphony.mp3">Packing House Polyphony</a><span class="time">2:18</span></div></li>
+    <li><div class="row"><a class="song" href="music/%2801-10%29%20Field%20Hands%20Reverie.mp3">Field Hands Reverie</a><span class="time">2:04</span></div></li>
+  </ol>
 </main>
 
-<footer>
-  <div class="wrap">© Grant Zhong · Harmonica, field recordings, and digital instrumentation.</div>
-</footer>
+<script>
+  // One shared player, so only one song can sound at a time.
+  // Without JavaScript, each title is an ordinary link to its MP3.
+  const audio = new Audio();
+  audio.preload = 'none';
+  const PLAY = 'M1 0 L11 6 L1 12 Z';
+  const PAUSE = 'M1 0 H4.5 V12 H1 Z M7.5 0 H11 V12 H7.5 Z';
+  const clock = s => Math.floor(s / 60) + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  let current = null;
+
+  const songs = [...document.querySelectorAll('li')].map((li, i) => {
+    const link = li.querySelector('.song');
+    const time = li.querySelector('.time');
+    const title = link.textContent;
+    const [m, s] = time.textContent.split(':').map(Number);
+
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'song';
+    button.innerHTML = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="' + PLAY + '"/></svg><span></span>';
+    button.querySelector('span').textContent = title;
+    button.setAttribute('aria-label', 'Play ' + title);
+    const song = { i, li, title, time, button, src: link.href, length: m * 60 + s, label: time.textContent };
+    button.addEventListener('click', () => toggle(song));
+    link.replaceWith(button);
+    return song;
+  });
+
+  const seek = document.createElement('input');
+  seek.type = 'range';
+  seek.className = 'seek';
+  seek.min = 0;
+  seek.step = 1;
+  seek.addEventListener('input', () => { audio.currentTime = seek.value; });
+
+  const error = document.createElement('p');
+  error.className = 'error';
+  error.setAttribute('role', 'alert');
+
+  function toggle(song) {
+    if (song !== current) return start(song);
+    if (audio.paused) play(); else audio.pause();
+  }
+
+  function start(song) {
+    if (current) {
+      current.li.classList.remove('current');
+      current.time.textContent = current.label;
+      draw(current, false);
+    }
+    error.remove();
+    current = song;
+    song.li.classList.add('current');
+    audio.src = song.src;
+    seek.max = song.length;
+    seek.value = 0;
+    seek.setAttribute('aria-label', 'Position in ' + song.title);
+    song.li.append(seek);
+    play();
+  }
+
+  function play() {
+    const song = current;
+    error.remove();
+    audio.play().catch(e => { if (e.name !== 'AbortError' && song === current) fail(); });
+  }
+
+  function fail() {
+    draw(current, false);
+    error.textContent = 'This song could not be loaded. Check your connection and try again.';
+    current.li.append(error);
+  }
+
+  function draw(song, playing) {
+    song.button.querySelector('path').setAttribute('d', playing ? PAUSE : PLAY);
+    song.button.setAttribute('aria-label', (playing ? 'Pause ' : 'Play ') + song.title);
+  }
+
+  audio.addEventListener('play', () => draw(current, true));
+  audio.addEventListener('pause', () => draw(current, false));
+  audio.addEventListener('timeupdate', () => {
+    seek.value = audio.currentTime;
+    seek.setAttribute('aria-valuetext', clock(audio.currentTime) + ' of ' + current.label);
+    current.time.textContent = clock(audio.currentTime) + ' / ' + current.label;
+  });
+  audio.addEventListener('ended', () => {
+    if (songs[current.i + 1]) start(songs[current.i + 1]);
+  });
+</script>
 
 </body>
 </html>
